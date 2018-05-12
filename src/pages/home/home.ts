@@ -17,7 +17,7 @@ export class HomePage {
   items: Array<{title: string, note: string, icon: string}>;
   constructor(public navCtrl: NavController, public navParams: NavParams,private service:UserdataProvider) {
     this.service.getData().subscribe((response)=>{
-      //console.log(response);
+      console.log(response);
       this.user = response;
     });
     // this.selectedItem = navParams.get('item');
@@ -40,11 +40,14 @@ export class HomePage {
     this.navCtrl.push(NewPage, { 
       user: user
     });
+    console.log(user);
   }
+  
 }
 
 interface User{
   id:number;
   name:string;
-  email:string;
+  title:string;
+  author:string;
 }

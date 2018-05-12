@@ -16,7 +16,7 @@ export class ServiceDataProvider {
     //console.log('Hello ServiceDataProvider Provider');
   }
   getData(){
-    let url = 'https://jsonplaceholder.typicode.com/users';
+    let url = 'http://10.80.39.17/TSP58/nursing/index.php/researcher/dashboard/get_data_tile_research';
     return this.http.get(url).map((res)=>res.json()); 
   }
 }
